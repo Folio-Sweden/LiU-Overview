@@ -84,7 +84,11 @@ Dessutom finns listor för:
 
 För den personal som jobbar med fjärrlån finns även listor för:
 
-- 
+- Flera fjärrlånebeställningar av samma verk samma dag
+- Fjärrlånebeställningar som är under transport
+- Fjärrlånebibliotek vars konto håller på att gå ut i Folio
+- Böcker vi lånat ut till andra bibliotek som inte kommit tillbaka
+- Böcker vi lånat in från andra bibliotek som inte kommit tillbaka
 
 ### RTAC
 
