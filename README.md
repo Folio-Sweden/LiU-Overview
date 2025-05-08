@@ -21,11 +21,17 @@ De python-skript som utvecklats på LiU ligger idag (2025-05-08) samlade i ett s
 
 ### Libris-import
 
+Skript som exporterar poster från Libris till MARC, som sedan läses in i Folio. 
+
 ### Automatiska omlån
 
-### Lägg till uppställningsord
+Skript som automatiskt försöker utföra omlån på lån 3 dagar innan lånet går ut. Enligt våra regler går en påminnelse ut till låntagaren 2 dagar innan lånet går ut, därav att lånet försöker lånas om dagen inann påminnelsen går/hade gått ut.
+
+### Lägg till uppställningsord (callNumberSuffix)
 
 ### Loggning av inloggningsnycklar till publika datorer
+
+Lån anonymiseras relativt fort i vår instans av Folio, men för just inloggningsnycklar till våra publika datorer vill vi spara lånehistoriken lite längre. En enkel lösning för detta har utvecklats så att UUID för den som lånat en inloggningsnyckel sparas i sex månader i en JSON-fil på den server som skripten körs ifrån. Skulle vi upptäcka att något oegentligt gjorts från en publik dator har vi en viss möjlighet att koppla det till en låntagare. 
 
 ### Epost-notifieringar
 
