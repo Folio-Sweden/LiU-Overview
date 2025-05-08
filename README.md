@@ -15,7 +15,7 @@ I och med att Folio Folio började över till Refresh Token Rotation (RTR), allt
 
 ## Folio-skript
 
-De python-skript som utvecklats på LiU ligger idag (2025-05-08) samlade i ett stort paket, lokalt på GitLab. Förutom att göra den uppgift de ska göra så loggas även resultatet mot en lokal övervakningstjänst. 
+De python-skript som utvecklats på LiU ligger idag (2025-05-08) samlade i ett stort paket, lokalt på GitLab. Förutom att göra den uppgift de ska göra så loggas även resultatet mot en lokal övervakningstjänst. En del av skripten kan verka överflödiga då det finns motsvarande funktionalitet i Folio, men då har sannolikt verksamheten haft lite speciella krav som inte gått att få till med den inbyggda funktionaliteten.
 
 **Status 2025-05-08:** Alla skript håller på att arbetas om för att använda pyfolioclient. Många skript brister i sakna retry-strategier mot Folio, Libris och Libris Fjärrlån.
 
@@ -37,7 +37,11 @@ Lån anonymiseras relativt fort i vår instans av Folio, men för just inloggnin
 
 ### Epost-notifieringar
 
-Email-notifications + overdue ref
+- Meddela låntagare som inte är studenter eller anställda när deras konto håller på att gå ut och de behöver godkänna låneregler igen
+- Sammanställning till låntagare med aktiva lån över deras lån
+- Sammanställning till fjärrlånande bibliotek med aktiva lån
+- Sammanställning av reservationer som inte kommer att kunna uppfyllas (ungefär att det inte finns något exemplar som inte är förlorat)
+- Personalnotifieringar när verk blir tillgängliga som de lagt en kommentar på med sitt LiU-id. För att bokvården eller katalogisatörer ska kunna fånga upp verk som ska lagas eller hanteras på något sätt.
 
 ### Fjärrlån
 
