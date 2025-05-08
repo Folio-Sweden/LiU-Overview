@@ -13,4 +13,37 @@ I och med att Folio Folio började över till Refresh Token Rotation (RTR), allt
 
 ## Folio-skript
 
+### Libris-import
+
+### Automatiska omlån
+
+### Lägg till uppställningsord
+
+### Loggning av inloggningsnycklar till publika datorer
+
+### Epost-notifieringar
+
+Email-notifications + overdue ref
+
+### Fjärrlån
+
+### Registervård
+
+### Användarhantering
+
+Sesam integration + deaktivera konton + remove users
+
+### Extern loggning av låneinfo för statistikunderlag
+
+### Hantera mapping rules
+
 ## Webbtjänsten Mina Lån
+
+### Mina Lån - lån och reservationer
+
+### Mina Lån - Listor för personal
+
+### RTAC
+
+### Fjärrlån
+
