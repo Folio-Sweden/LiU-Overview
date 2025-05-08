@@ -55,7 +55,19 @@ Den del som möter en normal låntagare (https://services.bibl.liu.se). Här kan
 
 ### Mina Lån - Listor för personal
 
-När man loggar in som persoal har man 
+När man loggar in som personal har man tillgång till en tredje flik som heter Listor. För att kunna se listorna behöver man förutom att vara personal ha rätt tagg på sin användare i Folio. Detta är vårt sätt att lösa det så att bara rätt användare får se listor. Huvudlistorna är:
+
+- Plocklista för reserverade böcker
+- Lista över böcker som ska rensas från reservationshyllan
+
+Dessutom finns listor för:
+
+- Försenade kursreferensböcker
+- Böcker som är under transport mellan våra campus (4st)
+
+För den personal som jobbar med fjärrlån finns även listor för:
+
+- 
 
 ### RTAC
 
