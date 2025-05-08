@@ -29,6 +29,8 @@ Skript som automatiskt försöker utföra omlån på lån 3 dagar innan lånet g
 
 ### Lägg till uppställningsord (callNumberSuffix)
 
+Skript som lägger till information i callNumberSuffix för valda locations i Folio om detta saknas.  
+
 ### Loggning av inloggningsnycklar till publika datorer
 
 Lån anonymiseras relativt fort i vår instans av Folio, men för just inloggningsnycklar till våra publika datorer vill vi spara lånehistoriken lite längre. En enkel lösning för detta har utvecklats så att UUID för den som lånat en inloggningsnyckel sparas i sex månader i en JSON-fil på den server som skripten körs ifrån. Skulle vi upptäcka att något oegentligt gjorts från en publik dator har vi en viss möjlighet att koppla det till en låntagare. 
@@ -40,6 +42,13 @@ Email-notifications + overdue ref
 ### Fjärrlån
 
 ### Registervård
+
+Enklare registervård vars behov vuxit fram sedan vi gick live:
+
+- Ändra callNumberTypeId för holding baserat på dess location
+- Ändra lånetyp baserat på location.
+- Ta bort icke-godkända taggar i Folio (taggar som skapas är synliga för alla användare och ju fler desto svårare att hitta rätt)
+- Kolla om nyrad smugit sig in i callNumber (vår återlämningsmaskin kan inte sortera verket rätt om detta finns)
 
 ### Användarhantering
 
