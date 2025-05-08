@@ -21,7 +21,7 @@ De python-skript som utvecklats på LiU ligger idag (2025-05-08) samlade i ett s
 
 ### Libris-import
 
-Skript som exporterar poster från Libris till MARC, som sedan läses in i Folio. 
+Skript som exporterar poster från Libris till MARC, som sedan läses in i Folio. Utgår från en tidsstämpel för när skriptet kördes senast och hämtar poster från denna tid till den tid då skriptet började köras. Det hämtar posterna, tar bort eventuella dubletter, gör vissa mindre justeringar av posterna, delar upp dem i mindre paket och laddar upp i Folio. Schemalagt att köras varannan minut.
 
 ### Automatiska omlån
 
@@ -43,11 +43,22 @@ Email-notifications + overdue ref
 
 ### Användarhantering
 
-Sesam integration + deaktivera konton + remove users
+Alla som får ett s.k. LiU-id (studenter och personal) skapas upp som låntagare i Folio automatiskt. Det centrala systemet som hanterar användare droppar filer på en FTP som vi bevakar. Utifrån detta skapar vi nya användare, uppdaterar dem och deaktiverar dem i Folio. Lite olika skript sköter olika delar av denna process.
 
 ### Extern loggning av låneinfo för statistikunderlag
 
+Lån anonymiseras relativt fort i vår instans av Folio vilket gör det svårt med årlig statistik till KB om man inte också lagrar delar av låneinformationen utanför Folio. Vi har en SQL-databas som löpande uppdateras med nya lån och som har koll på antalet omlån kopplade till lånet. Vi loggar här: Tid för lånet, låntagarkategorin, vart utlånet skedde, kön på personen som gjorde lånet utifrån personnummer, ålder på låntagaren då lånet gjordes, vilket typ av material som lånades, om materialet är s.k. kursbok, antalet omlån, hyllsignum för verket, krypterad och trasig info om vem som gjorde lånet (för att kunna få fram antal unika låntagare), samt lite fjärrlånespecifik information.
+
 ### Hantera mapping rules
+
+Mapping rules i Folio är en fil som beskriver hur MARC-information ska mappas mot interna Folio-fält. Vi har två egna regler. Processen vi har när Folio uppdateras är:
+
+1. Återställ mapping rules till den releasens default-regler. Detta för att få med eventuella ändringar som skett i releasen.
+2. Ladda ner de återställda reglerna.
+3. Införa våra ändringar.
+4. Ladda upp de uppdaterade reglerna till Folio.
+
+Detta skript stöttar denna process.
 
 ## Webbtjänsten Mina Lån
 
