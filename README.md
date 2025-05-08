@@ -9,3 +9,8 @@ Linköpings universtetsbibliotek gick live med Folio i juli 2023. Vår egenutvec
 
 ## pyfolioclient
 
+I och med att Folio Folio började över till Refresh Token Rotation (RTR), alltså tokens som har en begränsad livstid, behövde en kärnkomponent i vår python-kod arbetas om. I stället för att vara inbakad i vårt lokala skript-paket lyftes denna del ut i ett eget python-paket och distribueras nu via PyPi. Denna ligger för närvarande på https://github.com/balljok/pyfolioclient.
+
+## Folio-skript
+
+## Webbtjänsten Mina Lån
