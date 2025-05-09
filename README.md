@@ -45,6 +45,13 @@ Lån anonymiseras relativt fort i vår instans av Folio, men för just inloggnin
 
 ### Fjärrlån
 
+För att stötta fjärrlåneverksamheten finns ett antal skript som lite förenklat beskrivs nedan:
+
+- Bok-in (böcker vi lånar in från andra bibliotek). Kolla inkorgen i Libris Fjärrlån (iller.libris.kb.se). Kolla så att vi inte har verket själva. Skapa en minimal instanspost i Folio, skapa en holding, ett exemplar (item) och till sist lägg en reservation på verket. Återmata till LibrisFL att vi hanterat ärendet.
+- Bok-ut (böcker vi lånar ut till andra bibliotek). Hämta inkommande beställningar från Libris Fjärrlån ("incoming" respektive "reservations"). Kolla att biblioteket som lagt beställning finns som användare i Folio - om inte gör inget automatiskt förrän det lagts till. Kolla så att verket inte ingår i någon kurs vid LiU (för alla exemplar med samma instans-id får inget exemplar vara av typ kursref och det får inte vara taggat explicit med "kurs-ej-ill"). Hitta först och främst ett exemplar som är tillgängligt och helst vid vårt "huvudcampus". Skapa en reservation på item-nivå. Återmata till LibrisFL att vi hanterat det.
+- Skript för att förlänga utgångstiden för när verket ska plocaks bort från reservationshyllan.
+- Skript som uppdaterar status i LibrisFL när en reservation hämtats.
+
 ### Registervård
 
 Enklare registervård vars behov vuxit fram sedan vi gick live:
