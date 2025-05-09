@@ -111,7 +111,9 @@ För den personal som jobbar med fjärrlån finns även listor för:
 - Böcker vi lånat ut till andra bibliotek som inte kommit tillbaka
 - Böcker vi lånat in från andra bibliotek som inte kommit tillbaka
 
-### RTAC
+### RTAC och reservationer
+
+För att EDS (EBSCO Discovery Service) ska kunna vissa tillgänglighet och reservationer ska kunna skapas från EDS så tillhandahåller webbtjänsten API-endpoints. 
 
 ### Fjärrlån
 
