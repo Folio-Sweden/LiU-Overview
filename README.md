@@ -117,4 +117,12 @@ För den personal som jobbar med fjärrlån finns även listor för:
 
 ## Desktop-program
 
+### Återlämningsprogram
+
+### Uppdatera person i Folio
+
+### Lånekvitto
+
+### Papperskrav
+
 
