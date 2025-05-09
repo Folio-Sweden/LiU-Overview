@@ -113,7 +113,7 @@ För den personal som jobbar med fjärrlån finns även listor för:
 
 ### RTAC och reservationer
 
-För att EDS (EBSCO Discovery Service) ska kunna vissa tillgänglighet och reservationer ska kunna skapas från EDS så tillhandahåller webbtjänsten API-endpoints. 
+För att EDS (EBSCO Discovery Service) och Libris ska kunna vissa tillgänglighet och reservationer ska kunna skapas från EDS så tillhandahåller webbtjänsten API-endpoints. 
 
 ### Fjärrlån
 
