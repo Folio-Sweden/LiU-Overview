@@ -14,7 +14,7 @@ Linköpings universtetsbibliotek gick live med Folio i juli 2023. Vår egenutvec
 
 I och med att Folio Folio började över till Refresh Token Rotation (RTR), alltså tokens som har en begränsad livstid, behövde en kärnkomponent i vår python-kod arbetas om. I stället för att vara inbakad i vårt lokala skript-paket lyftes denna del ut i ett eget python-paket och distribueras nu via PyPi. Denna ligger för närvarande på https://github.com/balljok/pyfolioclient.
 
-## Folio-skript
+## Folio-skript i Python
 
 De python-skript som utvecklats på LiU ligger idag (2025-05-08) samlade i ett stort paket, lokalt på GitLab. Förutom att göra den uppgift de ska göra så loggas även resultatet mot en lokal övervakningstjänst. En del av skripten kan verka överflödiga då det finns motsvarande funktionalitet i Folio, men då har sannolikt verksamheten haft lite speciella krav som inte gått att få till med den inbyggda funktionaliteten.
 
@@ -119,9 +119,13 @@ För att EDS (EBSCO Discovery Service) och Libris ska kunna vissa tillgänglighe
 
 ## Desktop-program
 
+Ett antal desktop-program utvecklade i Visual Basic finns för att lösa lite olika uppgifter. Visual Basic används här av historiska skäl; vi hade ett antal program för vårt förra bibliotekssystem som hara justerats så lite som möjligt för att prata med Folio i stället. 
+
 ### Återlämningsprogram
 
 ### Uppdatera person i Folio
+
+Ibland skickas inte uppdateringar av studenter och anställda som de ska från systemet som hanterar användare centralt. I dessa fall finns ett deskotop-program i lånediskarna som man kan använda för att hämta information om en given låntagare. 
 
 ### Lånekvitto
 
