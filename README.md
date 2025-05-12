@@ -2,10 +2,10 @@
 
 ## Allmänt
 
-Linköpings universtetsbibliotek gick live med Folio i juli 2023. Vår egenutvecklade kod kan grovt delas in i fyra delar: 
+Linköpings universitetsbibliotek gick live med Folio i juli 2023. Vår egenutvecklade kod kan grovt delas in i fyra delar: 
 - En allmän folioklient i Python som sköter inloggning, sessionshantering, utloggning och HTTP-anrop mot Folio. Denna distribueras via PyPi och ligger publikt på GitHub
-- En uppsättning python-skript som körs scehmalagt. Ligger i lokalt GitLab-repo.
-- En webbserver i JavaScript som framförallt ger låntagare ett gränssnitt för att hantera lån och reservationer. Bibliotekspersonal kommer även via denna klient åt plocklistor och andra speciallistor. Dessutom utgör den ett API för EBSCO Discovery Service för att kunna göra RTAC-uppslag. Ligger i lokalt GitLab-repo.
+- En uppsättning python-skript som körs schemalagt. Ligger i lokalt GitLab-repo.
+- En webbserver i JavaScript som framför allt ger låntagare ett gränssnitt för att hantera lån och reservationer. Bibliotekspersonal kommer även via denna klient åt plocklistor och andra speciallistor. Dessutom utgör den ett API för EBSCO Discovery Service för att kunna göra RTAC-uppslag. Ligger i lokalt GitLab-repo.
 - Desktop-program som distribueras via centrala IT:s företagsportal. Visual Basic har använts som språk av legacy-skäl. Det här är program som tagits fram för vårt gamla bibliotekssystem och som bara justerats för att arbeta mot Folio. 
 
 **Status 2025-05-08:** Python-skripten håller på att arbetas om för att använda pyfolioclient genomgående. Mina Lån behöver arbetas om för att stödja tokens med begränsad livstid.
@@ -22,11 +22,11 @@ De python-skript som utvecklats på LiU ligger idag (2025-05-08) samlade i ett s
 
 ### Libris-import
 
-Skript som exporterar poster från Libris till MARC, som sedan läses in i Folio. Utgår från en tidsstämpel för när skriptet kördes senast och hämtar poster från denna tid till den tid då skriptet började köras. Det hämtar posterna, tar bort eventuella dubletter, gör vissa mindre justeringar av posterna, delar upp dem i mindre paket och laddar upp i Folio. Schemalagt att köras varannan minut.
+Skript som exporterar poster från Libris till MARC, som sedan läses in i Folio. Utgår från en tidsstämpel för när skriptet kördes senast och hämtar poster från denna tid till den tid då skriptet började köras. Det hämtar posterna, tar bort eventuella dubbletter, gör vissa mindre justeringar av posterna, delar upp dem i mindre paket och laddar upp i Folio. Schemalagt att köras varannan minut.
 
 ### Automatiska omlån
 
-Skript som automatiskt försöker utföra omlån på lån 3 dagar innan lånet går ut. Enligt våra regler går en påminnelse ut till låntagaren 2 dagar innan lånet går ut, därav att lånet försöker lånas om dagen inann påminnelsen går/hade gått ut.
+Skript som automatiskt försöker utföra omlån på lån 3 dagar innan lånet går ut. Enligt våra regler går en påminnelse ut till låntagaren 2 dagar innan lånet går ut, därav att lånet försöker lånas om dagen innan påminnelsen går/hade gått ut.
 
 ### Lägg till uppställningsord (callNumberSuffix)
 
@@ -50,7 +50,7 @@ För att stötta fjärrlåneverksamheten finns ett antal skript som lite förenk
 
 - Bok-in (böcker vi lånar in från andra bibliotek). Kolla inkorgen i Libris Fjärrlån (iller.libris.kb.se). Kolla så att vi inte har verket själva. Skapa en minimal instanspost i Folio, skapa en holding, ett exemplar (item) och till sist lägg en reservation på verket. Återmata till LibrisFL att vi hanterat ärendet.
 - Bok-ut (böcker vi lånar ut till andra bibliotek). Hämta inkommande beställningar från Libris Fjärrlån ("incoming" respektive "reservations"). Kolla att biblioteket som lagt beställning finns som användare i Folio - om inte gör inget automatiskt förrän det lagts till. Kolla så att verket inte ingår i någon kurs vid LiU (för alla exemplar med samma instans-id får inget exemplar vara av typ kursref och det får inte vara taggat explicit med "kurs-ej-ill"). Hitta först och främst ett exemplar som är tillgängligt och helst vid vårt "huvudcampus". Skapa en reservation på item-nivå. Återmata till LibrisFL att vi hanterat det.
-- Skript för att förlänga utgångstiden för när verket ska plocaks bort från reservationshyllan.
+- Skript för att förlänga utgångstiden för när verket ska plockas bort från reservationshyllan.
 - Skript som uppdaterar status i LibrisFL när en reservation hämtats.
 
 ### Registervård
@@ -85,7 +85,7 @@ Detta skript stöttar denna process.
 
 Tjänsten Mina Lån är lite missvisande då det är ett kodpaket som innefattar även annat som inte är ett gränssnitt för att låntagare ska kunna hantera sina lån och reservationer. Internt är det ett paket i JavaScript, hanterat via lokalt GitLab-repo, som heter "Foliofront Node Root". Det använder Node, Express, Passport för SAML och Embedded JavaScript Templated (EJS) för själva webbsidorna.
 
-**Status 2025-05-08:** Behöver arbetas om för att stödja RTR. Koden behöver en större översyn. Den gör sitt jobb, men det är tydligt att strukturen, felhanteringen och att den allämnna kvaliteten på koden har utrymme för förbättring. 
+**Status 2025-05-08:** Behöver arbetas om för att stödja RTR. Koden behöver en större översyn. Den gör sitt jobb, men det är tydligt att strukturen, felhanteringen och att den allmänna kvaliteten på koden har utrymme för förbättring. 
 
 ### Mina Lån - lån och reservationer
 
