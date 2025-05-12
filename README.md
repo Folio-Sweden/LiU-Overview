@@ -125,7 +125,7 @@ Ett antal desktop-program utvecklade i Visual Basic finns för att lösa lite ol
 
 ### Uppdatera person i Folio
 
-Ibland skickas inte uppdateringar av studenter och anställda som de ska från systemet som hanterar användare centralt. I dessa fall finns ett deskotop-program i lånediskarna som man kan använda för att hämta information om en given låntagare. 
+Ibland skickas inte uppdateringar av studenter och anställda som de ska från systemet som hanterar användare centralt. I dessa fall finns ett deskotop-program i lånediskarna som man kan använda för att hämta och uppdatera information om en given låntagare. 
 
 ### Lånekvitto
 
